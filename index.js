@@ -9,6 +9,7 @@ const port = 5000;//puede ser cualquier puerto
 
 app.use(morgan('dev'));//Use activa morgan en todo el proyecto
 app.use(cors());//Use activa cors con () para que todos los usuarios puedan ingresar esto se debe de configurar solo para user autorizados
+app.use(express.json());//Use activa express.json para que los datos sean enviados en formato json
 
 app.get('/get', (req, res) => {
     return res.status(200).send('Hola desde express');
